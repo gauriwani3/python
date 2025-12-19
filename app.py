@@ -21,10 +21,11 @@ logger = logging.getLogger(__name__)
 # -----------------------------
 
 PG_HOST = os.getenv("PG_HOST")
-PG_PORT = int(os.getenv("PG_PORT"))
+PG_PORT = int(os.getenv("PG_PORT", 5432))
 PG_DB   = os.getenv("PG_DB")
 PG_USER = os.getenv("PG_USER")
 PG_PASS = os.getenv("PG_PASS")
+
 
 PRODUCTION_PLAN_TABLE = "hil_tlj_cast_house.production_plan_batches"
 
