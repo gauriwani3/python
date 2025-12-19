@@ -18,11 +18,12 @@ logger = logging.getLogger(__name__)
 # -----------------------------
 # Database Configuration
 # -----------------------------
-PG_HOST = "10.75.151.100"
-PG_PORT = 5432
-PG_DB = "downstream"
-PG_USER = "hildwnstradmin"
-PG_PASS = "H1lD0wn#2025"
+
+PG_HOST = os.getenv("PG_HOST")
+PG_PORT = int(os.getenv("PG_PORT"))
+PG_DB   = os.getenv("PG_DB")
+PG_USER = os.getenv("PG_USER")
+PG_PASS = os.getenv("PG_PASS")
 
 PRODUCTION_PLAN_TABLE = "hil_tlj_cast_house.production_plan_batches"
 
